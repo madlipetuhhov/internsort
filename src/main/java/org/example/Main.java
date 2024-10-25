@@ -1,8 +1,6 @@
 package org.example;
 
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -17,7 +15,9 @@ public class Main {
         interns.add(new Intern("Daniil", "Starov", 41, Food.EUROPEAN));
 
         System.out.println(interns);
-        interns.sort(Intern.byFirstNameLength.thenComparing(Intern.byLastNameLength).thenComparing(Intern.byLastName));
+        interns.sort(Intern.byFirstNameLength
+                .thenComparing(Intern.byLastNameLength)
+                .thenComparing(Intern.byLastName));
 //        interns.sort(Intern.byFoodPopularity);
 //        interns.sort(Intern.byFoodPopularity);
         System.out.println(interns);

@@ -2,11 +2,9 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class InternTest {
 
@@ -24,7 +22,6 @@ class InternTest {
         Arrays.sort(actual, Intern.byFirstName);
         assertArrayEquals(expected, actual);
     }
-
 
     @Test
     void sortByFoodPopularity() {
@@ -59,7 +56,6 @@ class InternTest {
     }
 
 
-
     private Intern[] getInternList() {
         Intern[] interns = new Intern[6];
         interns[0] = new Intern("Liis", "Usin", 33, Food.INDIAN);
@@ -70,6 +66,4 @@ class InternTest {
         interns[5] = new Intern("Daniil", "Starov", 41, Food.EUROPEAN);
         return interns;
     }
-
-
 }

@@ -7,12 +7,7 @@ public record Intern(String firstName, String lastName, int age, Food food) {
 
     public static Comparator<Intern> byLastName = (o1, o2) -> o1.lastName.compareTo(o2.lastName);
 
-    public static Comparator<Intern> byFirstNameLength = new Comparator<Intern>() {
-        @Override
-        public int compare(Intern o1, Intern o2) {
-            return o1.firstName.length() - o2.firstName.length();
-        }
-    };
+    public static Comparator<Intern> byFirstNameLength = Comparator.comparingInt(o -> o.firstName.length());
 
     public static Comparator<Intern> byLastNameLength = Comparator.comparingInt(o -> o.lastName.length());
 
