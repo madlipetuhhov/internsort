@@ -8,7 +8,9 @@ public enum Food {
     JAPANESE(5),
     EUROPEAN(6);
 
-    int order;
+    final int order;
 
-    Food(int i) {}
+    Food(int order) {
+        this.order = order;
+    }
 }
